@@ -42,4 +42,21 @@ Before running the tests, make sure you have:
 1. **Clone the repository**
    ```bash
    git clone https://github.com/chamindu2003/IT23562424.git
-   
+
+2. **Navigate into the project folder**  
+     cd IT23562424
+
+3. **Install dependencies**
+     npm install
+
+4. **install Playwright browsers**
+     npx playwright install
+
+5. **Run all tests**
+     npx playwright test
+
+6. **Run tests with browser UI**
+     npx playwright test --headed
+
+7. **View test report**
+     npx playwright show-report
