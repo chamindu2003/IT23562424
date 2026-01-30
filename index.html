@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Transliteration Test App</title>
+  </head>
+  <body>
+    <main>
+      <h1>Transliteration App (Test Fixture)</h1>
+      <input id="inputBox" placeholder="Type singlish here" style="width:80%" />
+      <button id="submitBtn">Transliterate</button>
+      <div id="outputBox" style="margin-top:1rem; font-size:1.2rem;"></div>
+    </main>
+
+    <script type="module">
+      import { transliterate } from '/src/transliterate.js';
+
+      const inputBox = document.getElementById('inputBox');
+      const submitBtn = document.getElementById('submitBtn');
+      const outputBox = document.getElementById('outputBox');
+
+      function update() {
+        const out = transliterate(inputBox.value || '');
+        outputBox.textContent = out;
+      }
+
+      // real-time transliteration
+      inputBox.addEventListener('input', update);
+
+      // explicit button
+      submitBtn.addEventListener('click', update);
+
+      // expose for debug
+      window._transliterate = transliterate;
+    </script>
+  </body>
+</html>
