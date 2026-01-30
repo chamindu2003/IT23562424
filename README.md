@@ -47,16 +47,21 @@ Before running the tests, make sure you have:
      cd IT23562424
 
 3. **Install dependencies**
+
      npm install
 
 4. **install Playwright browsers**
+
      npx playwright install
 
 5. **Run all tests**
+
      npx playwright test
 
 6. **Run tests with browser UI**
+
      npx playwright test --headed
 
 7. **View test report**
+
      npx playwright show-report
